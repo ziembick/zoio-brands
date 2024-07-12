@@ -44,7 +44,7 @@ export default function Model() {
   }
   return (
     <group>
-      <Text position={[0, 0, -0.5]} fontSize={0.75} color="white">
+      <Text position={[0, 0, -0.5]} fontSize={0.75} color="white" font="fonts/Mersad-Bold.otf">
         TRANSFORME
       </Text>
       
