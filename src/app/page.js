@@ -8,9 +8,8 @@ const Scene = dynamic(() => import("@/app/components/Scene"), {
 
 export default function Home() {
   return (
-    <main className="relative h-screen flex flex-col justify-center items-center">
+    <main className="">
       <Navbar />
-
       <Scene />
       <Sobre />
     </main>

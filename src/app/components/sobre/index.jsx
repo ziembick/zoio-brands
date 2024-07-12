@@ -12,6 +12,30 @@ export default function Sobre() {
       <h1>SOBRE</h1>
       <h1>SOBRE</h1>
       <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+      <h1>SOBRE</h1>
+
     </div>
   )
 }
