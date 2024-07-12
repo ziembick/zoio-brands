@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import Navbar from "./components/navbar";
+import Sobre from "./components/sobre";
 
 const Scene = dynamic(() => import("@/app/components/Scene"), {
   ssr: false,
@@ -7,10 +9,10 @@ const Scene = dynamic(() => import("@/app/components/Scene"), {
 export default function Home() {
   return (
     <main className="relative h-screen flex flex-col justify-center items-center">
-        <h1>TEXTO</h1>
-      <div className="w-full h-full flex justify-center items-center">
-        <Scene />
-      </div>
+      <Navbar />
+
+      <Scene />
+      <Sobre />
     </main>
   );
 }
