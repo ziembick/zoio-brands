@@ -16,7 +16,7 @@ export default function Model() {
 
   useFrame(() => {
     if (mesh.current) {
-      mesh.current.rotation.z += 0.005;
+      mesh.current.rotation.z += 0.0013;
     }
   });
 
