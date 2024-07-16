@@ -8,7 +8,7 @@ const projetos = [
   {
     title: "Benyma",
     subtitle: "1",
-    src: '/medias/capabenyma.png',
+    src: '/medias/Quant.png',
     alt: "Benyma"
   },
   {
@@ -20,7 +20,7 @@ const projetos = [
   {
     title: "Tentando",
     subtitle: "3",
-    src: '/medias/capabenyma.png',
+    src: '/medias/Quant.png',
     alt: "Benyma"
   },
   {
@@ -32,7 +32,7 @@ const projetos = [
   {
     title: "Vamos la",
     subtitle: "5",
-    src: '/medias/capabenyma.png',
+    src: '/medias/Quant.png',
     alt: "Benyma"
   },
   {
