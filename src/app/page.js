@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Navbar from "./components/navbar";
 import Sobre from "./components/sobre";
 import Footer from "./components/footer";
-import Projetos from "./components/ProjetosDestaque";
+// import Projetos from "./components/ProjetosDestaque";
 
 
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <Scene />
       <Sobre />
-      <Projetos />
+      {/* <Projetos /> */}
       <Footer />
     </main>
   );

@@ -107,71 +107,71 @@
 //   );
 // }
 
-"use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import styles from "./projetos.module.sass";
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import Image from "next/image";
+// import styles from "./projetos.module.sass";
 
-const projetos = [
-  {
-    title: "Benyma",
-    subtitle: "1",
-    src: "/medias/capabenyma.png",
-    alt: "Benyma",
-  },
-  {
-    title: "Quanty",
-    subtitle: "2",
-    src: "/medias/Quant.png",
-    alt: "Quanty",
-  },
-  {
-    title: "Tentando",
-    subtitle: "3",
-    src: "/medias/capabenyma.png",
-    alt: "Benyma",
-  },
-  {
-    title: "Quase isso",
-    subtitle: "4",
-    src: "/medias/Quant.png",
-    alt: "Quanty",
-  },
-  {
-    title: "Vamos la",
-    subtitle: "5",
-    src: "/medias/capabenyma.png",
-    alt: "Benyma",
-  },
-  {
-    title: "Caramba",
-    subtitle: "6",
-    src: "/medias/Quant.png",
-    alt: "Quanty",
-  },
-];
+// const projetos = [
+//   {
+//     title: "Benyma",
+//     subtitle: "1",
+//     src: "/medias/capabenyma.png",
+//     alt: "Benyma",
+//   },
+//   {
+//     title: "Quanty",
+//     subtitle: "2",
+//     src: "/medias/Quant.png",
+//     alt: "Quanty",
+//   },
+//   {
+//     title: "Tentando",
+//     subtitle: "3",
+//     src: "/medias/capabenyma.png",
+//     alt: "Benyma",
+//   },
+//   {
+//     title: "Quase isso",
+//     subtitle: "4",
+//     src: "/medias/Quant.png",
+//     alt: "Quanty",
+//   },
+//   {
+//     title: "Vamos la",
+//     subtitle: "5",
+//     src: "/medias/capabenyma.png",
+//     alt: "Benyma",
+//   },
+//   {
+//     title: "Caramba",
+//     subtitle: "6",
+//     src: "/medias/Quant.png",
+//     alt: "Quanty",
+//   },
+// ];
 
-export default function Projetos() {
-  return (
-    <div className={styles.container}>
-      {projetos.map((item, index) => (
-        <div key={index}>
-          <div className={styles.textContainer}>
-            <h1 className={styles.title}>{item.title}</h1>
-            <span className={styles.subtitle}>{item.subtitle}</span>
-            <h2 className={styles.projetosDestaque}>
-              &#40;Projetos em destaque&#41;
-            </h2>
-          </div>
-          <Image
-            src={item.src}
-            alt={item.alt}
-            width={1000}
-            height={500}
-            className={styles.image}
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
+// export default function Projetos() {
+//   return (
+//     <div className={styles.container}>
+//       {projetos.map((item, index) => (
+//         <div key={index}>
+//           <div className={styles.textContainer}>
+//             <h1 className={styles.title}>{item.title}</h1>
+//             <span className={styles.subtitle}>{item.subtitle}</span>
+//             <h2 className={styles.projetosDestaque}>
+//               &#40;Projetos em destaque&#41;
+//             </h2>
+//           </div>
+//           <Image
+//             src={item.src}
+//             alt={item.alt}
+//             width={1000}
+//             height={500}
+//             className={styles.image}
+//           />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
