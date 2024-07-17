@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div>
+    <div className='py-11'>
       <h1>FOOTER</h1>
       <h1>FOOTER</h1>
       <h1>FOOTER</h1>
