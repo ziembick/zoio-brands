@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./servicos.module.sass";
 
 export default function Servicos() {
   const path = useRef(null);
+  const [visibleDetails, setVisibleDetails] = useState(null);
   let progress = 0;
   let time = Math.PI / 2;
   let reqId = null;
@@ -24,16 +25,16 @@ export default function Servicos() {
   };
 
   const manageMouseEnter = () => {
-    if(reqId){
-        window.cancelAnimationFrame(reqId)
-        resetAnimation()
+    if (reqId) {
+      window.cancelAnimationFrame(reqId);
+      resetAnimation();
     }
-  }
+  };
 
   const manageMouseMove = (e) => {
     const { movementY, clientX } = e;
-    const { left, width } = path.current.getBoundingClientRect()
-    x = (clientX - left) / width
+    const { left, width } = path.current.getBoundingClientRect();
+    x = (clientX - left) / width;
     progress += movementY;
     setPath(progress);
   };
@@ -62,6 +63,14 @@ export default function Servicos() {
     progress = 0;
   };
 
+  const handleMouseEnter = (index) => {
+    setVisibleDetails(index);
+  };
+
+  const handleMouseLeaveDetails = () => {
+    setVisibleDetails(null);
+  };
+
   return (
     <div className="text-white">
       <h1 className={`${styles.mainTitle} px-10 pb-10 text-8xl`}>Servicos</h1>
@@ -77,45 +86,33 @@ export default function Servicos() {
         </svg>
       </div>
       <div className={`${styles.container} px-10`}>
-        <div>
-          <h1 className={`${styles.number} text-4xl`}>01</h1>
-          <h2 className={`${styles.title} text-4xl`}>Estratégia</h2>
-          <p className={`${styles.text} w-4/5`}>
-            We are a strategy-driven studio. We utilize data, industry
-            experience and instinct to create branded experiences that.
-          </p>
-          <div className={`${styles.detailsContainer} py-10`}>
-            <p className={`${styles.details} pb-1`}>Custom Shopify Themes</p>
-            <p className={`${styles.details} pb-1`}>Headless Shopify</p>
-            <p className={`${styles.details} pb-1`}>Custom</p>
+        {[1, 2, 3].map((item, index) => (
+          <div key={index} className="cursor-pointer">
+            <div
+              className={`${styles[`textContainer${item}`]}`}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeaveDetails}
+            >
+              <h1 className={`${styles.number} text-4xl`}>0{item}</h1>
+              <h2 className={`${styles.title} text-4xl`}>
+                {item === 1 ? 'Estratégia' : item === 2 ? 'Design' : 'Development'}
+              </h2>
+              <p className={`${styles.text} w-4/5`}>
+                {item === 1
+                  ? 'We are a strategy-driven studio. We utilize data, industry experience and instinct to create branded experiences that.'
+                  : item === 2
+                  ? 'Design is at the very core of everything we do. We balance form, function and feeling to develop brands in the digital space.'
+                  : 'We develop websites and apps with user experience, modern technology and business strategy in mind'}
+              </p>
+            </div>
+            <div className={`${styles.detailsContainer} ${visibleDetails === index ? styles.visible : styles.hidden} py-10 flex justify-start flex-col text-center`}>
+              <p className={`${styles.details} pb-1`}></p>
+              <p className={`${styles.details} pb-1`}>Custom Shopify Themes</p>
+              <p className={`${styles.details} pb-1`}>Headless Shopify</p>
+              <p className={`${styles.details} pb-1`}>Custom</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <h1 className={`${styles.number} text-4xl`}>02</h1>
-          <h2 className={`${styles.title} text-4xl`}>Design</h2>
-          <p className={`${styles.text} w-4/5`}>
-            Design is at the very core of everything we do. We balance form,
-            function and feeling to develop brands in the digital space.
-          </p>
-          <div className={`${styles.detailsContainer} py-10`}>
-            <p className={`${styles.details} pb-1`}>Custom Shopify Themes</p>
-            <p className={`${styles.details} pb-1`}>Headless Shopify</p>
-            <p className={`${styles.details} pb-1`}>Custom</p>
-          </div>
-        </div>
-        <div>
-          <h1 className={`${styles.number} text-4xl`}>03</h1>
-          <h2 className={`${styles.title} text-4xl`}>Development</h2>
-          <p className={`${styles.text} w-4/5`}>
-            We develop websites and apps with user experience, modern technology
-            and business strategy in mind
-          </p>
-          <div className={`${styles.detailsContainer} py-10`}>
-            <p className={`${styles.details} pb-1`}>Custom Shopify Themes</p>
-            <p className={`${styles.details} pb-1`}>Headless Shopify</p>
-            <p className={`${styles.details} pb-1`}>Custom</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

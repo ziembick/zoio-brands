@@ -1,11 +1,8 @@
 .container
   display: flex
+  overflow: hidden
 
-.number
-  padding-bottom: 5rem
 
-.title
-  padding-bottom: 3rem
 
 .line
   height: 10px
@@ -33,3 +30,30 @@
 .box:hover
   height: 150px
   top: -75px
+
+
+.detailsContainer
+  padding-top: 2.5rem
+  padding-bottom: 2.5rem
+  opacity: 0
+  transition: opacity 0.5s ease-in-out
+
+.detailsContainer.visible
+  opacity: 1
+
+.detailsContainer.hidden
+  display: none
+
+.details
+  padding-bottom: 0.25rem
+  border-bottom: 1px solid white
+
+.number
+  padding-bottom: 5rem
+
+.title
+  padding-bottom: 3rem
+
+
+  
+
