@@ -5,6 +5,9 @@ import Navbar from "./components/navbar";
 import Sobre from "./components/sobre";
 import Footer from "./components/footer";
 import Card from "./components/Card";
+import Video from "./components/video"
+import Servicos from "./components/servicos"
+
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
 import { motion, useScroll} from "framer-motion"
@@ -39,12 +42,14 @@ export default function Home() {
       <Navbar />
       <Scene />
       <Sobre />
+      <Video />
       <div className={styles.main} ref={container}>
         {projetos.map((projeto, i) => {
           const targetScale = 1 - ((projetos.length - i) * 0.05)
           return <Card key={i} {...projeto} progress={scrollYProgress} i={i} range={[i * 0.25, 1]} targetScale={targetScale}/>;
         })}
       </div>
+      <Servicos />
       {/* <Titulo>TESTE</Titulo> */}
       <Footer />
     </main>
