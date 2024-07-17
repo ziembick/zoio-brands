@@ -105,7 +105,7 @@ export default function Servicos() {
                   : 'We develop websites and apps with user experience, modern technology and business strategy in mind'}
               </p>
             </div>
-            <div className={`${styles.detailsContainer} ${visibleDetails === index ? styles.visible : styles.hidden} py-10 flex justify-start flex-col text-center`}>
+            <div className={`${styles.detailsContainer} ${visibleDetails === index ? styles.visible : styles.hidden} py-10 pb-10 flex justify-start flex-col text-center`}>
               <p className={`${styles.details} pb-1`}></p>
               <p className={`${styles.details} pb-1`}>Custom Shopify Themes</p>
               <p className={`${styles.details} pb-1`}>Headless Shopify</p>
