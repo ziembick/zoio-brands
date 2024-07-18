@@ -36,3 +36,27 @@ export const projetos = [
   },
 
 ];
+
+
+export const galeria = [
+  {
+    title: "C2 Montreal",
+    src: "/medias/capabenyma.png",
+    color: "#000000"
+  },
+  {
+    title: "Office Studio",
+    src: "/medias/Quant.png",
+    color: "#8C8C8C"
+  },
+  {
+    title: "Locomotive",
+    src: "/medias/capabenyma.png",
+    color: "#EFE8D3"
+  },
+  {
+    title: "Silencio",
+    src: "/medias/Quant.png",
+    color: "#706D63"
+  }
+]
