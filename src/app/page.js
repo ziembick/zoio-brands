@@ -5,7 +5,7 @@ import Navbar from "./components/navbar";
 import Sobre from "./components/sobre";
 import Footer from "./components/footer";
 import Card from "./components/Card";
-import Video from "./components/video"
+import ZoioVideo from "./components/zoio"
 import Servicos from "./components/servicos"
 
 import styles from "./page.module.sass";
@@ -42,7 +42,7 @@ export default function Home() {
       <Navbar />
       <Scene />
       <Sobre />
-      <Video />
+      <ZoioVideo />
       <div className={styles.main} ref={container}>
         {projetos.map((projeto, i) => {
           const targetScale = 1 - ((projetos.length - i) * 0.05)
