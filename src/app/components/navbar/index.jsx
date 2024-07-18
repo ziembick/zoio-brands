@@ -9,7 +9,7 @@ import styles from "./navbar.module.sass";
 const NAV_ITEMS = [
   {
     type: "link",
-    label: "Galeria",
+    label: "Projetos",
     href: "/galeria",
   },
   {
