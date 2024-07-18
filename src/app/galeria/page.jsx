@@ -39,7 +39,7 @@ export default function Galeria() {
       <div className={`${styles.body}`}>
         {
           galeria.map((item, index) => { 
-            return <Galerias key={index} index={index} title={item.title} setModal={setModal} />
+            return <Galerias key={index} index={index} title={item.title} setModal={setModal} href={item.href}/>
           })
         }
       </div>
