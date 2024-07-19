@@ -1,0 +1,55 @@
+.container
+  width: 80%
+  max-width: 600px
+  margin: auto
+  padding: 20px
+
+.contact_form
+  background: rgba(255, 255, 255, 0.1)
+  padding: 20px
+  border-radius: 10px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+.form_group
+  margin-bottom: 20px
+
+  label
+    display: block
+    margin-bottom: 5px
+
+  input, textarea
+    width: 100%
+    padding: 10px
+    border-radius: 5px
+    border: 1px solid #ccc
+    background-color: rgba(255, 255, 255, 0.2)
+    color: #fff
+    outline: none
+
+    &::placeholder
+      color: rgba(255, 255, 255, 0.6)
+
+  textarea
+    height: 100px
+    resize: none
+
+  .radio_group
+    display: flex
+    flex-direction: column
+
+    label
+      margin-bottom: 5px
+
+.button
+  width: 100%
+  padding: 10px
+  border-radius: 5px
+  border: none
+  background-color: rgba(255, 255, 255, 0.3)
+  color: #fff
+  font-size: 16px
+  cursor: pointer
+  transition: background-color 0.3s
+
+  &:hover
+    background-color: rgba(255, 255, 255, 0.5)

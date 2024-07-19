@@ -2,8 +2,11 @@ import React from "react";
 import styles from "./galerias.module.sass";
 import Link from "next/link";
 
+
 export default function Galerias({ index, title, setModal, href }) {
   return (
+
+
     <Link href={href}>
       <div
         className={`${styles.project}`}
@@ -20,5 +23,6 @@ export default function Galerias({ index, title, setModal, href }) {
         </p>
       </div>
     </Link>
+
   );
 }

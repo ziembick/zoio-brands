@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./galeria.module.sass"
 import Galerias from "../components/galerias"
 import Modal from "../components/modal"
+import Navbar from "../components/navbar";
 
 export default function Galeria() {
   const galeria = [
@@ -35,6 +36,8 @@ export default function Galeria() {
 
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
+    <>
+    <Navbar/>
     <div className="bg-black">
       <div className={`${styles.body}`}>
         {
@@ -45,5 +48,6 @@ export default function Galeria() {
       </div>
       <Modal modal={modal} galeria={galeria}/>
     </div>
+    </>
   );
 }

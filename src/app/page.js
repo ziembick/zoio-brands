@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-// import Navbar from "./components/navbar";
+import Navbar from "./components/navbar";
 import Sobre from "./components/sobre";
 import Footer from "./components/footer";
 import Card from "./components/Card";
@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <main className="bg-black">
-      {/* <Navbar /> */}
+      <Navbar />
       <Scene />
       <Sobre />
       <ZoioVideo />

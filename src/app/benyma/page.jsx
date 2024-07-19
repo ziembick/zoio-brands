@@ -6,6 +6,7 @@ import Gallery from "../components/gallery";
 import Description from '../components/description'
 import Lenis from "lenis";
 import { useSpring } from "framer-motion";
+import Navbar from "../components/navbar";
 
 const projects = [
   {
@@ -59,11 +60,14 @@ const mouseMove = (e) => {
 }
 
   return (
+    <>
+    <Navbar />
     <div onMouseMove={mouseMove} className={styles.main}>
       {projects.map(({ handle }, i) => {
         return <Gallery mousePosition={mousePosition} handle={handle} key={i} />;
       })}
       <Description mousePosition={mousePosition} projects={projects}/>
     </div>
+    </>
   );
 }
