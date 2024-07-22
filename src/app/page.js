@@ -20,7 +20,7 @@ import Titulo from "./components/titulo"
 const Scene = dynamic(() => import("./components/Scene"), {
   ssr: false,
 });
-export default function Home({ router }) {
+export default function Home() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
