@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import NavItem from "./nav-item";
 import styles from "./navbar.module.sass";
 
+
 const NAV_ITEMS = [
   {
     type: "link",
@@ -47,8 +48,13 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`${styles.navItems} ${isScrolled ? styles.scrolled : ""}`}>
-      <nav className={`flex justify-between items-center h-full px-4 sm:px-10 ${styles.desktopNav}`}>
+    <header
+      className={`${styles.navItems} ${isScrolled ? styles.scrolled : ""}`}
+    >
+
+      <nav
+        className={`flex justify-between items-center h-full px-4 sm:px-10 ${styles.desktopNav}`}
+      >
         {NAV_ITEMS.map((item) => {
           if (item.type === "image") {
             return (
@@ -81,11 +87,11 @@ export default function Navbar() {
         {menuOpen ? "✕" : "☰"}
       </button>
       {menuOpen && (
-          <nav className={styles.mobileNav}>
-            {NAV_ITEMS.map((item) => (
-              <NavItem key={item.label} {...item} />
-            ))}
-          </nav>
+        <nav className={styles.mobileNav}>
+          {NAV_ITEMS.map((item) => (
+            <NavItem key={item.label} {...item} />
+          ))}
+        </nav>
       )}
     </header>
   );
