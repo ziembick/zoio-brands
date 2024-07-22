@@ -2,11 +2,13 @@
 @tailwind components
 @tailwind utilities
 
+@layer utilities
+  .pause
+    animation-play-state: paused
 
-html, body, #__next 
+html, body, #__next
   height: 100%
   background-color: #000
-
 
 *::-webkit-scrollbar
   width: 8px
@@ -22,7 +24,6 @@ html, body, #__next
 hr
   margin: 0
   border-color: rgba(0,0,0, 0.1)
-
 
 /* :root {
  --foreground-rgb: 0, 0, 0;

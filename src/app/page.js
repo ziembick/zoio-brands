@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import Card from "./components/Card";
 import ZoioVideo from "./components/zoio"
 import Servicos from "./components/servicos"
+import ShowProjects from './components/ShowProjects'
 
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
@@ -49,6 +50,7 @@ export default function Home() {
           return <Card key={i} {...projeto} progress={scrollYProgress} i={i} range={[i * 0.25, 1]} targetScale={targetScale}/>;
         })}
       </div>
+        <ShowProjects />
       <Servicos />
       {/* <Titulo>TESTE</Titulo> */}
       <Footer />
