@@ -38,11 +38,11 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  const paragraph = "PROJETOS EM DESTAQUE"
+  const paragraph = "PROJETOS EM DESTAQUE";
 
   return (
     <main className="bg-black">
-      <Cursor />
+      {/* <Cursor /> */}
       <Navbar />
       <AnimatePresence mode="wait">
         <Scene />
@@ -52,7 +52,7 @@ export default function Home() {
           <div
             className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}
           >
-            <Paragraph value={paragraph}/>
+            <Paragraph value={paragraph} />
           </div>
           {projetos.map((projeto, i) => {
             const targetScale = 1 - (projetos.length - i) * 0.05;

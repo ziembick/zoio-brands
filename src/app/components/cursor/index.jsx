@@ -32,8 +32,8 @@ export default function Cursor() {
     const {x, y} = delayedMouse.current
 
     delayedMouse.current = {
-      x: lerp(x, mouse.current.x, 0.01),
-      y: lerp(y, mouse.current.y, 0.01)
+      x: lerp(x, mouse.current.x, 0.075),
+      y: lerp(y, mouse.current.y, 0.075)
     }
 
     moveCircle(delayedMouse.current.x, delayedMouse.current.y);
@@ -49,10 +49,12 @@ export default function Cursor() {
   return (
     <div
       ref={circle}
-      className="fixed top-0 left-0 bg-[#BCE4F2] rounded-full"
+      className="fixed top-0 left-0 bg-[#0CE220] rounded-full"
       style={{
         width: size,
         height: size,
+        zIndex: 9999,
+        pointerEvents: 'none'
       }}
     ></div>
   );
