@@ -1,10 +1,32 @@
-import React from "react";
+'use client'
+
+import React, { useRef } from "react";
 import Navbar from "../components/navbar";
 import styles from "./contato.module.sass";
 import Link from "next/link";
-
+import emailjs from '@emailjs/browser';
 
 export default function Contato() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(process.env.YOUR_SERVICE_ID, process.env.YOUR_TEMPLATE_ID, form.current, {
+        publicKey: process.env.YOUR_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <>
       <Navbar />
@@ -19,37 +41,68 @@ export default function Contato() {
           </div>
           <div className={styles.infoGroup}>
             <h2 className={styles.subtitle}>Siga-nos</h2>
-            <Link href="https://instagram.com" target="_blank" className={styles.link}>
+            <Link
+              href="https://instagram.com"
+              target="_blank"
+              className={styles.link}
+            >
               Instagram <span className={styles.arrow}>→</span>
             </Link>
-            <Link href="https://behance.net" target="_blank" className={styles.link}>
+            <Link
+              href="https://behance.net"
+              target="_blank"
+              className={styles.link}
+            >
               Behance <span className={styles.arrow}>→</span>
             </Link>
           </div>
         </div>
         <div className={styles.formContainer}>
-          <form className={styles.contact_form}>
+          <form className={styles.contact_form} ref={form} onSubmit={sendEmail}>
             <div className={styles.form_group}>
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="Your Name" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+              />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="Your Email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+              />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="brand-name">Name signed on your brand</label>
-              <input type="text" id="brand-name" placeholder="Brand Name" />
+              <input
+                type="text"
+                id="brand-name"
+                name="brand_name"
+                placeholder="Brand Name"
+              />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="employees">How many employees does your company currently have?</label>
-              <input type="text" id="employees" placeholder="Number of Employees" />
+              <label htmlFor="employees">
+                How many employees does your company currently have?
+              </label>
+              <input
+                type="text"
+                id="employees"
+                name="employees"
+                placeholder="Number of Employees"
+              />
             </div>
             <div className={styles.form_group}>
               <label>How did you get to Benyaf Brands?</label>
               <div className={styles.radio_group}>
                 <label>
-                  <input type="radio" name="source" value="instagram" /> Instagram
+                  <input type="radio" name="source" value="instagram" />{" "}
+                  Instagram
                 </label>
                 <label>
                   <input type="radio" name="source" value="website" /> Website
@@ -70,30 +123,71 @@ export default function Contato() {
             </div>
             <div className={styles.form_group}>
               <label htmlFor="segment">What is the companys segment?</label>
-              <input type="text" id="segment" placeholder="Technology" />
+              <input
+                type="text"
+                id="segment"
+                name="segment"
+                placeholder="Technology"
+              />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="market-time">How long has the brand been established on the market?</label>
-              <input type="text" id="market-time" placeholder="5 years" />
+              <label htmlFor="market-time">
+                How long has the brand been established on the market?
+              </label>
+              <input
+                type="text"
+                id="market-time"
+                name="market_time"
+                placeholder="5 years"
+              />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="services">What products or services are offered?</label>
-              <textarea id="services" placeholder="Briefly describe the products or services you offer." />
+              <label htmlFor="services">
+                What products or services are offered?
+              </label>
+              <textarea
+                id="services"
+                name="services"
+                placeholder="Briefly describe the products or services you offer."
+              />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="quote">In addition to the brand, would you like to receive a quote for other elements derived from the new visual identity to be created?</label>
-              <textarea id="quote" placeholder="E.g.: stationery items, digital items, promotional items, etc. If yes, please list which and how many of each." />
+              <label htmlFor="quote">
+                In addition to the brand, would you like to receive a quote for
+                other elements derived from the new visual identity to be
+                created?
+              </label>
+              <textarea
+                id="quote"
+                name="quote"
+                placeholder="E.g.: stationery items, digital items, promotional items, etc. If yes, please list which and how many of each."
+              />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="budget">What is your estimated budget for the branding design project?</label>
-              <textarea id="budget" placeholder="Please provide an estimate of how much you are willing to invest in this project, so that we can adapt our work proposal to your financial availability." />
+              <label htmlFor="budget">
+                What is your estimated budget for the branding design project?
+              </label>
+              <textarea
+                id="budget"
+                name="budget"
+                placeholder="Please provide an estimate of how much you are willing to invest in this project, so that we can adapt our work proposal to your financial availability."
+              />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="additional-info">Feel free to contribute with other pertinent information about your brand.</label>
-              <textarea id="additional-info" placeholder="Share any additional relevant information about your brand." />
+              <label htmlFor="additional-info">
+                Feel free to contribute with other pertinent information about
+                your brand.
+              </label>
+              <textarea
+                id="additional-info"
+                name="additional_info"
+                placeholder="Share any additional relevant information about your brand."
+              />
             </div>
             <div className={styles.form_group}>
-              <button className={styles.button} type="submit">Submit</button>
+              <button className={styles.button} type="submit">
+                Submit
+              </button>
             </div>
           </form>
         </div>

@@ -9,7 +9,7 @@ import ZoioVideo from "./components/zoio";
 import Cursor from "./components/cursor";
 import Servicos from "./components/servicos";
 import ShowProjects from "./components/ShowProjects";
-
+import Paragraph from "./components/paragraph";
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
@@ -38,21 +38,21 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
+  const paragraph = "PROJETOS EM DESTAQUE"
+
   return (
     <main className="bg-black">
       <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
         <Scene />
-
         <Sobre />
         <ZoioVideo />
-
         <div className={styles.main} ref={container}>
           <div
             className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}
           >
-            <h1>PROJETOS EM DESTAQUE</h1>
+            <Paragraph value={paragraph}/>
           </div>
           {projetos.map((projeto, i) => {
             const targetScale = 1 - (projetos.length - i) * 0.05;
@@ -68,7 +68,6 @@ export default function Home() {
             );
           })}
         </div>
-
         <ShowProjects />
         {/* <Titulo>TESTE</Titulo> */}
         <Servicos />
