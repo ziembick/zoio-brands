@@ -13,9 +13,9 @@ export default function Contato() {
     e.preventDefault();
 
     emailjs
-      .sendForm(process.env.YOUR_SERVICE_ID, process.env.YOUR_TEMPLATE_ID, form.current, {
-        publicKey: process.env.YOUR_PUBLIC_KEY,
-      })
+    .sendForm('service_7peblg9', 'template_e783jy9', form.current, {
+      publicKey: '2fHgcjnXCEcoPxp77',
+    })
       .then(
         () => {
           console.log("SUCCESS!");
@@ -25,7 +25,9 @@ export default function Contato() {
         }
       );
     e.target.reset();
+    alert("Mensagem enviada")
   };
+
 
   return (
     <>
@@ -78,7 +80,7 @@ export default function Contato() {
               />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="brand-name">Name signed on your brand</label>
+              <label htmlFor="brand_name">Name signed on your brand</label>
               <input
                 type="text"
                 id="brand-name"
@@ -131,7 +133,7 @@ export default function Contato() {
               />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="market-time">
+              <label htmlFor="market_time">
                 How long has the brand been established on the market?
               </label>
               <input
@@ -174,7 +176,7 @@ export default function Contato() {
               />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="additional-info">
+              <label htmlFor="additional_info">
                 Feel free to contribute with other pertinent information about
                 your brand.
               </label>
