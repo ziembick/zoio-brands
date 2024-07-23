@@ -13,20 +13,22 @@ const projects = [
     name: "Dyal Thak",
     handle: "dyal_thak",
     className: "dyal",
-    zoio: "Quant is a cutting-edge research and development laboratory founded in 2023 with the mission of exploring and expanding the horizons of quantum computing. Established by a team of scientists, engineers, and technological innovators, Quant aims to solve complex problems through solutions based on quantum technologies. Since its inception, Quant has established itself as a leader in the field, combining high-quality scientific research with practical development of quantum software and hardware.",
+    zoio: "PT-BR",
   },
   {
     name: "Leidinger Matthias",
     handle: "leidinger_matthias",
-    zoio: "TA Quant é um laboratório de pesquisa e desenvolvimento de ponta, fundado em 2023, com a missão de explorar e expandir os horizontes da computação quântica. Fundada por uma equipe de cientistas, engenheiros e inovadores tecnológicos, a Quant busca resolver problemas complexos através de soluções baseadas em tecnologias quânticas. Desde seu início, a Quant se estabeleceu como um líder no campo, combinando pesquisa científica de alta qualidade com desenvolvimento prático de software e hardware quântico.",
+    zoio: "Quant é um laboratório de pesquisa e desenvolvimento de ponta, fundado em 2023, com a missão de explorar e expandir os horizontes da computação quântica. Fundada por uma equipe de cientistas, engenheiros e inovadores tecnológicos, a Quant busca resolver problemas complexos através de soluções baseadas em tecnologias quânticas. Desde seu início, a Quant se estabeleceu como um líder no campo, combinando pesquisa científica de alta qualidade com desenvolvimento prático de software e hardware quântico.",
   },
   {
     name: "Mark Rammers",
     handle: "mark_rammers",
+    zoio: "ENG"
   },
   {
     name: "Landon Speers",
     handle: "landon_speers",
+    zoio: "Quant is a cutting-edge research and development laboratory founded in 2023 with the mission of exploring and expanding the horizons of quantum computing. Established by a team of scientists, engineers, and technological innovators, Quant aims to solve complex problems through solutions based on quantum technologies. Since its inception, Quant has established itself as a leader in the field, combining high-quality scientific research with practical development of quantum software and hardware."
   },
 ];
 

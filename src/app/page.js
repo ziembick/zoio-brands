@@ -9,7 +9,7 @@ import ZoioVideo from "./components/zoio";
 import Cursor from "./components/cursor";
 import Servicos from "./components/servicos";
 import ShowProjects from "./components/ShowProjects";
-import Transition from "./components/transition";
+
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
@@ -44,6 +44,7 @@ export default function Home() {
       <Navbar />
       <AnimatePresence mode="wait">
         <Scene />
+
         <Sobre />
         <ZoioVideo />
 

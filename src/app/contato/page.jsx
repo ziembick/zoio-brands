@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import styles from "./contato.module.sass";
 import Link from "next/link";
 
+
 export default function Contato() {
   return (
     <>
