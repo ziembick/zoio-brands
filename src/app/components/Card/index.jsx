@@ -3,8 +3,9 @@
 import React, { useRef } from "react";
 import styles from "./card.module.sass";
 import Image from "next/image";
-import Hover from "../hover";
+// import Hover from "../hover";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 export default function Card({
   title,
@@ -16,6 +17,7 @@ export default function Card({
   progress,
   range,
   targetScale,
+  href,
 }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -28,18 +30,17 @@ export default function Card({
 
   return (
     <div ref={container} className={styles.cardContainer}>
-
-      <motion.div
-        className={styles.card}
-        style={{
-          scale,
-          backgroundColor: color,
-          top: `calc(-10% + ${i * 25}px)`,
-        }}
-      >
-        <div>
-          
-          {/* <div className={styles.textContainer}>
+      <Link href={href}>
+        <motion.div
+          className={styles.card}
+          style={{
+            scale,
+            backgroundColor: color,
+            top: `calc(-10% + ${i * 10}px)`,
+          }}
+        >
+          <div>
+            {/* <div className={styles.textContainer}>
             <Hover>
               <h1 className={styles.title}>{title}</h1>
             </Hover>
@@ -50,19 +51,20 @@ export default function Card({
               &#40;Projetos em destaque&#41;
             </h2>
           </div> */}
-          <div className={styles.imageContainer}>
-            <motion.div style={{ imgScale }} className={styles.inner}>
-              <Image
-                src={src}
-                alt={alt}
-                width={1000}
-                height={500}
-                className={styles.image}
-              />
-            </motion.div>
+            <div className={styles.imageContainer}>
+              <motion.div style={{ imgScale }} className={styles.inner}>
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={1000}
+                  height={500}
+                  className={styles.image}
+                />
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </Link>
     </div>
   );
 }

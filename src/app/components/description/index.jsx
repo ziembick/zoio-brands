@@ -11,17 +11,18 @@ export default function Description({ mousePosition, projects }) {
 
   return (
     <div className={styles.description}>
-			<h1 className="text-white">AQUI ESTÁ SOBRE O PROJETOS</h1>
-      <div className={styles.descriptionContainer}>
-        {projects.map(({ name }, i) => {
+      <h1 className="text-black">AQUI ESTÁ SOBRE O PROJETOS</h1>
+      <div className={`${styles.descriptionContainer} px-10 `}>
+        {projects.map(({ zoio }, i) => {
           return (
             <p
+              className={styles.spacing}
               onMouseOver={() => {
                 setIndex(i);
               }}
               key={`p${i}`}
             >
-              {name}
+              {zoio}
             </p>
           );
         })}
@@ -33,6 +34,9 @@ export default function Description({ mousePosition, projects }) {
           fill
         />
       </motion.div>
+      <div>
+        <h1 className="text-white">DESCRIOTION AQUI PRA BAIXO</h1>
+      </div>
     </div>
   );
 }

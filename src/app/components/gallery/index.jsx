@@ -9,10 +9,10 @@ export default function Gallery({ mousePosition, handle }) {
   return (
     <div className={styles.gallery}>
       <div className={styles.imageContainer}>
-        <Image src={`/images/${handle}/background.jpg`} alt="image" fill />
+        <Image src={`/images/${handle}/background.gif`} alt="image" fill />
       </div>
       <motion.div className={styles.vignette} style={{ x, y }}>
-        <Image src={`/images/${handle}/1.jpg`} alt="image" fill />
+        <Image src={`/images/${handle}/1.gif`} alt="image" fill />
       </motion.div>
     </div>
   );

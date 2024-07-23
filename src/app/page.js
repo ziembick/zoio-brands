@@ -6,7 +6,7 @@ import Sobre from "./components/sobre";
 import Footer from "./components/footer";
 import Card from "./components/Card";
 import ZoioVideo from "./components/zoio";
-import Cursor from './components/cursor'
+import Cursor from "./components/cursor";
 import Servicos from "./components/servicos";
 import ShowProjects from "./components/ShowProjects";
 import Transition from "./components/transition";
@@ -46,10 +46,13 @@ export default function Home() {
         <Scene />
         <Sobre />
         <ZoioVideo />
+
         <div className={styles.main} ref={container}>
-        <div className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}>
-        <h1>PROJETOS EM DESTAQUE</h1>
-      </div>
+          <div
+            className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}
+          >
+            <h1>PROJETOS EM DESTAQUE</h1>
+          </div>
           {projetos.map((projeto, i) => {
             const targetScale = 1 - (projetos.length - i) * 0.05;
             return (
@@ -64,8 +67,9 @@ export default function Home() {
             );
           })}
         </div>
+
         <ShowProjects />
-      {/* <Titulo>TESTE</Titulo> */}
+        {/* <Titulo>TESTE</Titulo> */}
         <Servicos />
       </AnimatePresence>
       <Footer />

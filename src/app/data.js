@@ -5,6 +5,7 @@ export const projetos = [
     src: "/medias/capabenyma.png",
     alt: "Benyma",
     color: "#BBACAF00",
+    href: '/benyma'
   },
   {
     title: "Quanty",
@@ -12,6 +13,7 @@ export const projetos = [
     src: "/medias/Quant.png",
     alt: "Quanty",
     color: "#977F6000",
+    href: '/quanty'
   },
   {
     title: "Tentando",
@@ -19,6 +21,7 @@ export const projetos = [
     src: "/medias/capabenyma.png",
     alt: "Benyma",
     color: "#C2491D00",
+    href: '/benyma'
   },
 ];
 

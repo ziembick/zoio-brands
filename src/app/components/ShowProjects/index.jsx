@@ -4,6 +4,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Link from "next/link";
+import styles from './showprojects.module.sass'
 
 gsap.registerPlugin(CustomEase);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
@@ -45,7 +46,7 @@ export default function ShowProjects() {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className={`${styles.mainDiv} flex justify-center`}>
       <div
         ref={heroInfiniteRef}
         className="text-white absolute bottom-[-25vw] left-[35%] ml-10 -mr-10 h-8  w-40 overflow-hidden rounded-full border border-white text-xs font-normal uppercase  opacity-0  lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] lg:h-14 lg:w-[16vw] lg:text-xl  lg:leading-10 "
