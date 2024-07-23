@@ -6,6 +6,7 @@ import Sobre from "./components/sobre";
 import Footer from "./components/footer";
 import Card from "./components/Card";
 import ZoioVideo from "./components/zoio";
+import Cursor from './components/cursor'
 import Servicos from "./components/servicos";
 import ShowProjects from "./components/ShowProjects";
 import Transition from "./components/transition";
@@ -15,7 +16,7 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 
-import Titulo from "./components/titulo"
+// import Titulo from "./components/titulo"
 
 const Scene = dynamic(() => import("./components/Scene"), {
   ssr: false,
@@ -39,12 +40,16 @@ export default function Home() {
 
   return (
     <main className="bg-black">
+      <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
         <Scene />
         <Sobre />
         <ZoioVideo />
         <div className={styles.main} ref={container}>
+        <div className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}>
+        <h1>PROJETOS EM DESTAQUE</h1>
+      </div>
           {projetos.map((projeto, i) => {
             const targetScale = 1 - (projetos.length - i) * 0.05;
             return (
@@ -60,7 +65,7 @@ export default function Home() {
           })}
         </div>
         <ShowProjects />
-      <Titulo>TESTE</Titulo>
+      {/* <Titulo>TESTE</Titulo> */}
         <Servicos />
       </AnimatePresence>
       <Footer />

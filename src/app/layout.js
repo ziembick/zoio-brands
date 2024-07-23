@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.sass";
 import BackToTop from './components/back-to-top'
+import Cursor from "./components/cursor";
+
 // import Navbar from "./components/navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -15,6 +17,7 @@ export default function RootLayout({ children}) {
     <html lang="en">
       <body className={inter.className}>
         {/* <Navbar /> */}
+        <Cursor/>
         <BackToTop/>
         {children}
       </body>
