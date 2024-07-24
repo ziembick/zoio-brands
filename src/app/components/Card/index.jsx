@@ -51,12 +51,12 @@ export default function Card({
               &#40;Projetos em destaque&#41;
             </h2>
           </div> */}
-            <div className={styles.imageContainer}>
+            <div className={`${styles.imageContainer}`}>
               <motion.div style={{ imgScale }} className={styles.inner}>
                 <Image
                   src={src}
                   alt={alt}
-                  width={1000}
+                  width={1200}
                   height={500}
                   className={styles.image}
                 />

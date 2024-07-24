@@ -5,13 +5,13 @@ import styles from "./zoioVideo.module.sass";
 export default function ZoioVideo() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
-      <div className={`${styles.videoContainer}w-full max-w-7xl`}>
+      <div className={`${styles.videoContainer} w-full h-full`}>
         <Video
           src="/videos/zoioMux.mp4"
           autoPlay
           controls
           loop
-          className="w-full h-auto"
+          className={`${styles.video}`}
         />
       </div>
     </div>

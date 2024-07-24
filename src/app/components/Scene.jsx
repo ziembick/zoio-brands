@@ -1,13 +1,15 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Model from "./Model";
 import { Environment, OrbitControls, Text } from "@react-three/drei";
-import styles from "./model.module.css"
+import styles from "./model.module.css";
 
 export default function Scene() {
   return (
-    <div className={`${styles.principal} w-full h-screen flex items-center justify-center`}>
+    <div
+      className={`${styles.principal} w-full h-screen flex items-center justify-center`}
+    >
       <Canvas
         style={{ backgroundColor: "black" }}
         camera={{ position: [0, 0, 5], fov: 60 }}
@@ -15,7 +17,6 @@ export default function Scene() {
         gl={{ alpha: true }}
         className="w-full h-full"
       >
-
         <directionalLight intensity={3} position={[0, 3, 2]} />
         <Environment preset="city" />
         <Model position={[0, 0, 0]} />
