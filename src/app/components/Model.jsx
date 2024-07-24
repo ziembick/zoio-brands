@@ -1,3 +1,5 @@
+'use client'
+
 import {
   MeshTransmissionMaterial,
   OrbitControls,
@@ -12,7 +14,7 @@ import React, { useRef } from "react";
 export default function Model() {
   const mesh = useRef();
   const { nodes } = useGLTF("/medias/Curve.glb");
-  const { viewport } = useThree(); // tentar utilizar depois
+  const { viewport, size } = useThree(); // tentar utilizar depois
 
   useFrame(() => {
     if (mesh.current) {

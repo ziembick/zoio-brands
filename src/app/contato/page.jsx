@@ -5,6 +5,8 @@ import Navbar from "../components/navbar";
 import styles from "./contato.module.sass";
 import Link from "next/link";
 import emailjs from '@emailjs/browser';
+import SocialHover from '../components/SocialHover'
+import EmailHover from '../components/EmailHover'
 
 export default function Contato() {
   const form = useRef();
@@ -37,12 +39,16 @@ export default function Contato() {
           <h1 className={styles.title}>Contato.</h1>
           <div className={styles.infoGroup}>
             <h2 className={styles.subtitle}>Entre em contato</h2>
+            <EmailHover>
             <Link href="mailto:ale@alebrands.co" className={styles.email}>
+
               email@email.com <span className={styles.arrow}>→</span>
             </Link>
+            </EmailHover>
           </div>
           <div className={styles.infoGroup}>
             <h2 className={styles.subtitle}>Siga-nos</h2>
+            <SocialHover>
             <Link
               href="https://instagram.com"
               target="_blank"
@@ -50,6 +56,8 @@ export default function Contato() {
             >
               Instagram <span className={styles.arrow}>→</span>
             </Link>
+            </SocialHover>
+            <SocialHover>
             <Link
               href="https://behance.net"
               target="_blank"
@@ -57,17 +65,18 @@ export default function Contato() {
             >
               Behance <span className={styles.arrow}>→</span>
             </Link>
+            </SocialHover>
           </div>
         </div>
         <div className={styles.formContainer}>
           <form className={styles.contact_form} ref={form} onSubmit={sendEmail}>
             <div className={styles.form_group}>
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Nome</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Your Name"
+                placeholder="Seu Nome"
               />
             </div>
             <div className={styles.form_group}>
@@ -76,31 +85,31 @@ export default function Contato() {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="Seu Email"
               />
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="brand_name">Name signed on your brand</label>
+              <label htmlFor="brand_name">Qual o nome da sua marca?</label>
               <input
                 type="text"
                 id="brand-name"
                 name="brand_name"
-                placeholder="Brand Name"
+                placeholder="Nome da sua marca"
               />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="employees">
-                How many employees does your company currently have?
+                Quantos funcionários sua empresa tem atualmente?
               </label>
               <input
                 type="text"
                 id="employees"
                 name="employees"
-                placeholder="Number of Employees"
+                placeholder="Número de funcionários"
               />
             </div>
             <div className={styles.form_group}>
-              <label>How did you get to Benyaf Brands?</label>
+              <label>Por onde você conheceu a Zoio Brands?</label>
               <div className={styles.radio_group}>
                 <label>
                   <input type="radio" name="source" value="instagram" />{" "}
@@ -124,71 +133,68 @@ export default function Contato() {
               </div>
             </div>
             <div className={styles.form_group}>
-              <label htmlFor="segment">What is the companys segment?</label>
+              <label htmlFor="segment">Qual o segmento da sua empresa?</label>
               <input
                 type="text"
                 id="segment"
                 name="segment"
-                placeholder="Technology"
+                placeholder="Tecnologia"
               />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="market_time">
-                How long has the brand been established on the market?
+                Por quanto tempo sua marca está estabilizada no mercado?
               </label>
               <input
                 type="text"
                 id="market-time"
                 name="market_time"
-                placeholder="5 years"
+                placeholder="5 anos"
               />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="services">
-                What products or services are offered?
+                Quais produtos ou serviços são oferecidos por sua marca/empresa?
               </label>
               <textarea
                 id="services"
                 name="services"
-                placeholder="Briefly describe the products or services you offer."
+                placeholder="Brevemente descreva os produtos ou serviços oferecidos."
               />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="quote">
-                In addition to the brand, would you like to receive a quote for
-                other elements derived from the new visual identity to be
-                created?
+                Além da marca, gostaria de receber um orçamento para outros elementos derivados da nova identidade visual criada?
               </label>
               <textarea
                 id="quote"
                 name="quote"
-                placeholder="E.g.: stationery items, digital items, promotional items, etc. If yes, please list which and how many of each."
+                placeholder="Ex.: Artigos de papelaria, artigos digitais, artigos promocionais, etc. Se sim, liste quais e quantos de cada"
               />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="budget">
-                What is your estimated budget for the branding design project?
+                What is your estimated budget for the branding design project? Qual o orçamento estimado para o projeto de design da marca?
               </label>
               <textarea
                 id="budget"
                 name="budget"
-                placeholder="Please provide an estimate of how much you are willing to invest in this project, so that we can adapt our work proposal to your financial availability."
+                placeholder="Por gentileza, forneça uma estimativa de quantoe stá disposto a investir neste projeto, para que possamos adaptar a nossa proposta de trabalho à sua disponibiliade financeira."
               />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="additional_info">
-                Feel free to contribute with other pertinent information about
-                your brand.
+                Sinta-se à vontade para contribuir com outras informações pertinentes sobre a sua marca.
               </label>
               <textarea
                 id="additional-info"
                 name="additional_info"
-                placeholder="Share any additional relevant information about your brand."
+                placeholder="Compartilhe qualquer informação adicional relevante sobre sua marca."
               />
             </div>
             <div className={styles.form_group}>
               <button className={styles.button} type="submit">
-                Submit
+                Enviar
               </button>
             </div>
           </form>
