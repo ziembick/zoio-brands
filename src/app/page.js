@@ -17,7 +17,7 @@ import { useEffect, useRef, Suspense, lazy, useState } from "react";
 import Lenis from "lenis";
 
 const Scene = lazy(() => import("./components/Scene")); // Carregamento dinâmico com Suspense
-const Loader = lazy(() => import("./components/Loader")); // Carregamento dinâmico do Loader
+const Loader = lazy(() => import("./components/loader")); // Carregamento dinâmico do Loader
 
 export default function Home() {
   const container = useRef(null);
