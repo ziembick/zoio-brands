@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
 export default function Cursor() {
-  const size = 30;
+  const size = 20;
   const circle = useRef();
   const mouse = useRef({
     x: 0,

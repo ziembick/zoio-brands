@@ -3,7 +3,7 @@ import styles from "./galerias.module.sass";
 import Link from "next/link";
 
 
-export default function Galerias({ index, title, setModal, href }) {
+export default function Galerias({ index, title, setModal, href, iden }) {
   return (
 
 
@@ -19,7 +19,7 @@ export default function Galerias({ index, title, setModal, href }) {
       >
         <h2 className={`${styles.projectTitle} text-white`}>{title}</h2>
         <p className={`${styles.projectText} text-white`}>
-          Design & Development
+          {iden}
         </p>
       </div>
     </Link>

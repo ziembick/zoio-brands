@@ -12,25 +12,29 @@ export default function Galeria() {
       title: "Benyma",
       src: "capabenyma.png",
       color: "#000000",
-      href: "/benyma"
+      href: "/benyma",
+      iden: "Teste 1"
     },
     {
       title: "Quanty",
       src: "Quant.png",
       color: "#000000",
-      href: "/quanty"
+      href: "/quanty",
+      iden: "Teste 2"
     },
     {
       title: "Benyma",
       src: "capabenyma.png",
       color: "#000000",
-      href: "/benyma"
+      href: "/benyma",
+      iden: "Teste 3"
     },
     {
       title: "Quanty",
       src: "Quant.png",
       color: "#000000",
-      href: "/quanty"
+      href: "/quanty",
+      iden: "Teste 4"
     },
   ];
 
@@ -42,7 +46,7 @@ export default function Galeria() {
       <div className={`${styles.body}`}>
         {
           galeria.map((item, index) => { 
-            return <Galerias key={index} index={index} title={item.title} setModal={setModal} href={item.href}/>
+            return <Galerias key={index} index={index} title={item.title} iden={item.iden} setModal={setModal} href={item.href}/>
           })
         }
       </div>

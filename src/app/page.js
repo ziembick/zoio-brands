@@ -40,7 +40,7 @@ export default function Home() {
     // Simulate a 3-second delay before setting isLoading to false
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Adjust the timeout value for your desired delay
+    }, 1450); // Adjust the timeout value for your desired delay
 
     return () => lenis.destroy(); // Cleanup on component unmount
   }, []);

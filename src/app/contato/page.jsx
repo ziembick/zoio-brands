@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
 import React, { useRef } from "react";
 import Navbar from "../components/navbar";
 import styles from "./contato.module.sass";
 import Link from "next/link";
-import emailjs from '@emailjs/browser';
-import SocialHover from '../components/SocialHover'
-import EmailHover from '../components/EmailHover'
+import emailjs from "@emailjs/browser";
+import SocialHover from "../components/SocialHover";
+import EmailHover from "../components/EmailHover";
 
 export default function Contato() {
   const form = useRef();
@@ -15,9 +15,9 @@ export default function Contato() {
     e.preventDefault();
 
     emailjs
-    .sendForm('service_7peblg9', 'template_e783jy9', form.current, {
-      publicKey: '2fHgcjnXCEcoPxp77',
-    })
+      .sendForm("service_7peblg9", "template_e783jy9", form.current, {
+        publicKey: "2fHgcjnXCEcoPxp77",
+      })
       .then(
         () => {
           console.log("SUCCESS!");
@@ -27,57 +27,54 @@ export default function Contato() {
         }
       );
     e.target.reset();
-    alert("Mensagem enviada")
+    alert("Mensagem enviada");
   };
-
 
   return (
     <>
       <Navbar />
-      <div className={styles.contactSection}>
-        <div className={styles.contactInfo}>
-          <h1 className={styles.title}>Contato.</h1>
+      <div className={`${styles.contactSection} px-10 py-10`}>
+        <div className={`${styles.contactInfo}`}>
+          <h1 className={`${styles.title} pb-10`}>Contato.</h1>
           <div className={styles.infoGroup}>
             <h2 className={styles.subtitle}>Entre em contato</h2>
             <EmailHover>
-            <Link href="mailto:ale@alebrands.co" className={styles.email}>
-
-              email@email.com <span className={styles.arrow}>→</span>
-            </Link>
+              <Link href="mailto:ale@alebrands.co" className={styles.email}>
+                email@email.com <span className={styles.arrow}>→</span>
+              </Link>
             </EmailHover>
           </div>
           <div className={styles.infoGroup}>
             <h2 className={styles.subtitle}>Siga-nos</h2>
             <SocialHover>
-            <Link
-              href="https://instagram.com"
-              target="_blank"
-              className={styles.link}
-            >
-              Instagram <span className={styles.arrow}>→</span>
-            </Link>
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                className={styles.link}
+              >
+                Instagram <span className={styles.arrow}>→</span>
+              </Link>
             </SocialHover>
             <SocialHover>
-            <Link
-              href="https://behance.net"
-              target="_blank"
-              className={styles.link}
-            >
-              Behance <span className={styles.arrow}>→</span>
-            </Link>
+              <Link
+                href="https://behance.net"
+                target="_blank"
+                className={styles.link}
+              >
+                Behance <span className={styles.arrow}>→</span>
+              </Link>
             </SocialHover>
           </div>
         </div>
-        <div className={styles.formContainer}>
-          <form className={styles.contact_form} ref={form} onSubmit={sendEmail}>
+        <div className={`${styles.formContainer}`}>
+          <form
+            className={`${styles.contact_form} pt-10`}
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div className={styles.form_group}>
               <label htmlFor="name">Nome</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Seu Nome"
-              />
+              <input type="text" id="name" name="name" placeholder="Seu Nome" />
             </div>
             <div className={styles.form_group}>
               <label htmlFor="email">Email</label>
@@ -108,30 +105,36 @@ export default function Contato() {
                 placeholder="Número de funcionários"
               />
             </div>
-            <div className={styles.form_group}>
-              <label>Por onde você conheceu a Zoio Brands?</label>
+            <div className={styles.form_group2}>
+              <label className="pb-3">Por onde você conheceu a Zoio Brands?</label>
               <div className={styles.radio_group}>
-                <label>
-                  <input type="radio" name="source" value="instagram" />{" "}
+                <label className="pb-3">
                   Instagram
+                  <input type="radio" name="source" value="instagram" />
                 </label>
-                <label>
-                  <input type="radio" name="source" value="website" /> Website
+                <label className="pb-3">
+                  Website
+                  <input type="radio" name="source" value="website" />
                 </label>
-                <label>
-                  <input type="radio" name="source" value="behance" /> Behance
+                <label className="pb-3">
+                  Behance
+                  <input type="radio" name="source" value="behance" />
                 </label>
-                <label>
-                  <input type="radio" name="source" value="dribbble" /> Dribbble
+                <label className="pb-3">
+                  Dribbble
+                  <input type="radio" name="source" value="dribbble" />
                 </label>
-                <label>
-                  <input type="radio" name="source" value="referral" /> Referral
+                <label className="pb-3">
+                  Referral
+                  <input type="radio" name="source" value="referral" />
                 </label>
-                <label>
-                  <input type="radio" name="source" value="google" /> Google
+                <label className="pb-3">
+                  Google
+                  <input type="radio" name="source" value="google" />
                 </label>
               </div>
             </div>
+
             <div className={styles.form_group}>
               <label htmlFor="segment">Qual o segmento da sua empresa?</label>
               <input
@@ -164,7 +167,8 @@ export default function Contato() {
             </div>
             <div className={styles.form_group}>
               <label htmlFor="quote">
-                Além da marca, gostaria de receber um orçamento para outros elementos derivados da nova identidade visual criada?
+                Além da marca, gostaria de receber um orçamento para outros
+                elementos derivados da nova identidade visual criada?
               </label>
               <textarea
                 id="quote"
@@ -174,7 +178,7 @@ export default function Contato() {
             </div>
             <div className={styles.form_group}>
               <label htmlFor="budget">
-                What is your estimated budget for the branding design project? Qual o orçamento estimado para o projeto de design da marca?
+                Qual o orçamento estimado para o projeto de design da marca?
               </label>
               <textarea
                 id="budget"
@@ -184,7 +188,8 @@ export default function Contato() {
             </div>
             <div className={styles.form_group}>
               <label htmlFor="additional_info">
-                Sinta-se à vontade para contribuir com outras informações pertinentes sobre a sua marca.
+                Sinta-se à vontade para contribuir com outras informações
+                pertinentes sobre a sua marca.
               </label>
               <textarea
                 id="additional-info"
