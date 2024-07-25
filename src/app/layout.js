@@ -8,7 +8,7 @@ import Cursor from "./components/cursor";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  title: "Zoio Brands",
+  title: "Zoio Brands - Design Studio",
   description: "Full Stack Brand Design",
 };
 

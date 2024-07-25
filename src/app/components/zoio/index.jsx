@@ -18,7 +18,7 @@ export default function ZoioVideo() {
         ></iframe> */}
         <Video
           src="/videos/zoioMux.mp4"
-          autoPlay
+          // autoPlay
           controls
           loop
           className={`${styles.video}`}

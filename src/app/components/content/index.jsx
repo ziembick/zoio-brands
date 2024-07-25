@@ -3,7 +3,7 @@ import styles from "./content.module.sass"
 
 export default function Content() {
   return (
-    <div className={`${styles.container} bg-black min-h-screen text-white flex justify-between items-center px-10`}>
+    <div className={`${styles.container} min-h-screen text-white flex justify-between items-center px-10`}>
       <div className={`${styles.textContainer}text-center`}>
         <h1 className={`${styles.mainText} text-7xl font-bold`}>VEJA,</h1>
         <h1 className={`${styles.mainText} text-7xl font-bold`}>SINTA,</h1>
