@@ -3,13 +3,15 @@
   src: url("/fonts/Mersad-Bold.otf") format('opentype')
   
 .navItems
-  position: -webkit-sticky
-  position: sticky
+  position: fixed
+  // position: sticky
+  // position: -webkit-sticky
   top: 0
+  left: 0
   width: 100%
   background-color: #000000
   transition: background-color 0.3s ease
-  z-index: 1000
+  z-index: 99999
   font-family: 'Mersad-Bold', sans-serif
 
   &.scrolled
