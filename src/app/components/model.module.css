@@ -1,6 +1,5 @@
 .principal {
     width: 100%;
-    margin-top: -50px;
     height: 100vh; /* Alterado para ocupar toda a altura da tela */
     display: flex; /* Assegure-se de que o display seja flexível */
     align-items: center; /* Alinha verticalmente ao centro */
