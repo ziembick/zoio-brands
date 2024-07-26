@@ -111,7 +111,7 @@ export default function Contato() {
   return (
     <>
       <Navbar />
-      <div className="text-white">
+      <div className="text-white xl:flex-col">
         <h1
           className={`${styles.contato_title} text-white flex justify-center items-center py-10 text-7xl`}
         >
@@ -128,7 +128,7 @@ export default function Contato() {
             <path ref={path} className={`${styles.path}`}></path>
           </svg>
         </div>
-        <div className="flex py-10 px-10 justify-between items-start">
+        <div className="flex py-10 px-10 justify-between items-start max-lg:flex-col">
           <div className="">
             {/* alterado aqui */}
             <h2 className={`${styles.containerTitle} pb-7 text-5xl`}>
