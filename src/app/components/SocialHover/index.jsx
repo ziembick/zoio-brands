@@ -12,7 +12,7 @@ export default function SocialHover({ children }) {
       <h1
         className={`${styles.segundo} mt-1 absolute left-0 inline-block translate-y-[120%] rotate-12 p-1 transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0`}
       >
-        {children} <span className={styles.arrow}>→</span>
+        {children}
       </h1>
     </div>
   );
