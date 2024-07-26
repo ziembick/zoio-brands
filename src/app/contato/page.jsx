@@ -138,14 +138,24 @@ export default function Contato() {
               className={`${styles.contatoForm} bg-white flex items-center justify-center p-4 rounded-lg shadow-lg`}
             >
               <form
+                ref={form}
+                onSubmit={sendEmail}
                 className={`${styles.mainForm} bg-white flex items-center justify-center p-4 max-w-4xl w-full `}
               >
+                <input
+                  type="hidden"
+                  name="source"
+                  value={activeButtons.join(", ")}
+                />
+
                 <div className={`${styles.mainDiv}`}>
                   <h2 className="text-black text-3xl font-semibold mb-12">
                     Brief us on what you need
                   </h2>
                   <div className="flex flex-wrap gap-3 mb-12">
                     <button
+                      name="source"
+                      value="Website"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Website")
                           ? "bg-black text-white"
@@ -159,6 +169,8 @@ export default function Contato() {
                       Website
                     </button>
                     <button
+                      name="source"
+                      value="Mobile App"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Mobile App")
                           ? "bg-black text-white"
@@ -172,6 +184,8 @@ export default function Contato() {
                       Mobile App
                     </button>
                     <button
+                      name="source"
+                      value="Desktop App"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Desktop App")
                           ? "bg-black text-white"
@@ -185,6 +199,8 @@ export default function Contato() {
                       Desktop App
                     </button>
                     <button
+                      name="source"
+                      value="Experimental"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Experimental")
                           ? "bg-black text-white"
@@ -198,6 +214,8 @@ export default function Contato() {
                       Experimental
                     </button>
                     <button
+                      name="source"
+                      value="Strategy"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Strategy")
                           ? "bg-black text-white"
@@ -211,6 +229,8 @@ export default function Contato() {
                       Strategy
                     </button>
                     <button
+                      name="source"
+                      value="Experience Design"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Experience Design")
                           ? "bg-black text-white"
@@ -224,6 +244,8 @@ export default function Contato() {
                       Experience Design
                     </button>
                     <button
+                      name="source"
+                      value="Visual Design"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Visual Design")
                           ? "bg-black text-white"
@@ -237,6 +259,8 @@ export default function Contato() {
                       Visual Design
                     </button>
                     <button
+                      name="source"
+                      value="3D Design"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("3D Design")
                           ? "bg-black text-white"
@@ -250,6 +274,8 @@ export default function Contato() {
                       3D Design
                     </button>
                     <button
+                      name="source"
+                      value="Motion"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Motion")
                           ? "bg-black text-white"
@@ -263,6 +289,8 @@ export default function Contato() {
                       Motion
                     </button>
                     <button
+                      name="source"
+                      value="Branding"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Branding")
                           ? "bg-black text-white"
@@ -276,6 +304,8 @@ export default function Contato() {
                       Branding
                     </button>
                     <button
+                      name="source"
+                      value="Illustration"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Illustration")
                           ? "bg-black text-white"
@@ -289,6 +319,8 @@ export default function Contato() {
                       Illustration
                     </button>
                     <button
+                      name="source"
+                      value="Workshops"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Workshops")
                           ? "bg-black text-white"
@@ -302,6 +334,8 @@ export default function Contato() {
                       Workshops
                     </button>
                     <button
+                      name="source"
+                      value="Other"
                       className={`py-3 px-5 rounded-full hover:bg-gray-300 text-black ${
                         activeButtons.includes("Other")
                           ? "bg-black text-white"
@@ -326,8 +360,9 @@ export default function Contato() {
                         </label>
                         <input
                           type="text"
+                          name="name"
                           placeholder="Your full name"
-                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg"
+                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                       </div>
                       <div>
@@ -336,8 +371,9 @@ export default function Contato() {
                         </label>
                         <input
                           type="email"
+                          name="email"
                           placeholder="Your email address"
-                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg"
+                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                       </div>
                       <div>
@@ -347,7 +383,8 @@ export default function Contato() {
                         <input
                           type="text"
                           placeholder="Your company name"
-                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg"
+                          name="company"
+                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                       </div>
                       <div>
@@ -356,8 +393,9 @@ export default function Contato() {
                         </label>
                         <input
                           type="text"
+                          name="website"
                           placeholder="Your website"
-                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg"
+                          className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                         <p className="text-black pt-6 text-base">
                           All set and filled? Email address looking good?
@@ -370,12 +408,14 @@ export default function Contato() {
                           Your Enquiry*
                         </label>
                         <textarea
+                          name="mensagem"
                           placeholder="Enter your message here"
-                          className={`${styles.areaTexto} mt-1 block w-full p-5 border border-gray-300 rounded-lg`}
+                          className={`${styles.areaTexto} mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black`}
                         ></textarea>
                       </div>
                       <div className="mt-6 flex items-center justify-end text-black">
                         <button
+                          type="submit"
                           className={`${styles.btn} flex items-center gap-1 px-4 py-2 cursor-pointer text-black font-semibold tracking-widest rounded-md  duration-300 hover:gap-2 hover:translate-x-3`}
                         >
                           Send
@@ -463,8 +503,9 @@ export default function Contato() {
                       target="_blank"
                       className={`${styles.link}`}
                     >
-                      <p className="pb-3">Instagram <span className={styles.arrow}>→</span></p>
-                      
+                      <p className="pb-3">
+                        Instagram <span className={styles.arrow}>→</span>
+                      </p>
                     </Link>
                   </SocialHover>
                   <SocialHover>
