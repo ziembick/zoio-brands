@@ -85,7 +85,7 @@ export default function Servicos() {
           <path ref={path} className={`${styles.path}`}></path>
         </svg>
       </div>
-      <div className={`${styles.container} px-10`}>
+      <div className={`${styles.containerTudoMeu} px-10`}>
         {[1, 2, 3].map((item, index) => (
           <div key={index} className="cursor-pointer">
             <div
