@@ -14,7 +14,7 @@ export default function ZoioVideo() {
 
     gsap.fromTo(
       videoElement,
-      { scale: 0.2 },
+      { scale: 0.01 },
       {
         scale: 1,
         scrollTrigger: {
