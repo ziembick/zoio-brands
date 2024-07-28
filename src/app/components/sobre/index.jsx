@@ -27,7 +27,7 @@ export default function Sobre() {
     });
 
     h1Spans.forEach((span, index) => {
-      const delay = index * 0.1; // Ajuste o delay conforme necessário
+      const delay = index * 2.1; // Ajuste o delay conforme necessário
       h1Timeline.to(
         span,
         {

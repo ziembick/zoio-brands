@@ -1,24 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Video from "next-video";
 import styles from "./zoioVideo.module.sass";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ZoioVideo() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    gsap.fromTo(
+      videoElement,
+      { scale: 0.2 },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: videoElement,
+          start: "top right",
+          end: "bottom center",
+          scrub: 1,
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
-      <div className={`${styles.videoContainer} w-full h-full`}>
-      {/* <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/WTHtaM3DJC0?autoplay=1&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-          className={styles.video}
-        ></iframe> */}
+      <div className={`${styles.videoContainer} w-full h-full`} ref={videoRef}>
         <Video
           src="/videos/zoioMux.mp4"
-          // autoPlay
+          autoPlay
           controls
           loop
           className={`${styles.video}`}
