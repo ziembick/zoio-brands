@@ -12,12 +12,12 @@ import ShowProjects from "./components/ShowProjects";
 import Paragraph from "./components/paragraph";
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
-import { AnimatePresence, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useEffect, useRef, Suspense, lazy, useState } from "react";
 import Lenis from "lenis";
 
-const Scene = lazy(() => import("./components/Scene")); // Carregamento dinâmico com Suspense
-const Loader = lazy(() => import("./components/loader")); // Carregamento dinâmico do Loader
+const Scene = lazy(() => import("./components/Scene"));
+const Loader = lazy(() => import("./components/loader"));
 
 export default function Home() {
   const container = useRef(null);
@@ -26,7 +26,7 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
 
-  const [isLoading, setIsLoading] = useState(true); // State to control loader visibility
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -37,25 +37,21 @@ export default function Home() {
     }
     requestAnimationFrame(raf);
 
-    // Simulate a 3-second delay before setting isLoading to false
     setTimeout(() => {
       setIsLoading(false);
-    }, 1450); // Adjust the timeout value for your desired delay
+    }, 1450);
 
-    return () => lenis.destroy(); // Cleanup on component unmount
+    return () => lenis.destroy();
   }, []);
 
   const paragraph = "PROJETOS EM DESTAQUE";
 
   return (
     <main className="bg-black">
-      {/* <Cursor /> */}
-      {isLoading ? ( // Conditionally render Loader or content
-        <Suspense fallback={<Loader />}>
-          <Loader /> {/* Your custom Loader component */}
-        </Suspense>
+      {isLoading ? (
+        <Loader />
       ) : (
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Navbar />
           <Scene />
           <Sobre />
@@ -81,7 +77,6 @@ export default function Home() {
             })}
           </div>
           <ShowProjects />
-          {/* <Titulo>TESTE</Titulo> */}
           <Servicos />
           <Footer />
         </Suspense>
@@ -89,6 +84,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
