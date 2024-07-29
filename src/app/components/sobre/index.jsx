@@ -7,7 +7,7 @@ import { CustomEase } from "gsap/dist/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
-CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
+CustomEase.create("cubic-text-slow", "0.42, 0, 0.58, 1");
 
 export default function Sobre() {
   const triggerRef = useRef(null);
@@ -24,21 +24,23 @@ export default function Sobre() {
         end: "bottom 80%",
         scrub: 1,
       },
+      stagger: 1, 
     });
 
     h1Spans.forEach((span, index) => {
-      const delay = index * 2.1; // Ajuste o delay conforme necessário
-      h1Timeline.to(
+      h1Timeline.fromTo(
         span,
+        {
+          y: "100%",
+          opacity: 0,
+        },
         {
           y: 0,
           opacity: 1,
-          duration: 1.5,
-          ease: "cubic-text",
-          stagger: 0.1,
-          scrub: 1,
+          duration: 1,
+          ease: "cubic-text-slow",
         },
-        delay
+        index * 0.9 // Atraso individual para cada span
       );
     });
 
@@ -51,13 +53,17 @@ export default function Sobre() {
       },
     });
 
-    h6Timeline.to(
+    h6Timeline.fromTo(
       h6Ref.current.querySelector("span"),
+      {
+        y: "100%",
+        opacity: 0,
+      },
       {
         y: 0,
         opacity: 1,
         duration: 1.5,
-        ease: "cubic-text",
+        ease: "cubic-text-slow",
       },
       0
     );
