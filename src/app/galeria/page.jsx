@@ -42,7 +42,7 @@ export default function Galeria() {
   return (
     <>
     <Navbar/>
-    <div className="bg-black">
+    <div className="bg-black mt-20">
       <div className={`${styles.body}`}>
         {
           galeria.map((item, index) => { 

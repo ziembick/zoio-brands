@@ -111,7 +111,7 @@ export default function Contato() {
   return (
     <>
       <Navbar />
-      <div className="text-white xl:flex-col">
+      <div className="text-white xl:flex-col mt-20">
         <h1
           className={`${styles.contato_title} text-white flex justify-center items-center py-10 text-7xl`}
         >
