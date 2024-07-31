@@ -33,6 +33,8 @@ export default function ZoioVideo() {
         <video
           src="/videos/zoioMux.mp4"
           controls
+          autoPlay
+          muted
           loop
           className={`${styles.video}`}
         />

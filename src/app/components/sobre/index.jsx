@@ -37,10 +37,10 @@ export default function Sobre() {
         {
           y: 0,
           opacity: 1,
-          duration: 1,
+          duration: 2,
           ease: "cubic-text-slow",
         },
-        index * 0.9 // Atraso individual para cada span
+        index * 2.5 // Atraso individual para cada span
       );
     });
 
