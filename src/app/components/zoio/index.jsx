@@ -31,7 +31,7 @@ export default function ZoioVideo() {
     <div className="flex flex-col items-center justify-center w-full h-full">
       <div className={`${styles.videoContainer} w-full h-full`} ref={videoRef}>
         <video
-          src="/videos/zoioMux.mp4"
+          src="/videos/zoiovideo.mp4"
           controls
           autoPlay
           muted
