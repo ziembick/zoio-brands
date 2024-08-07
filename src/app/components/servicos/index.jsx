@@ -137,6 +137,12 @@ export default function Servicos() {
               className={`${styles.detailsContainer} py-10 pb-10 flex justify-start flex-col text-center`}
               initial="hidden"
               animate={visibleDetails === index ? "visible" : "hidden"}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 30,
+                delay: 0.2,
+              }}
               variants={detailsVariants}
             >
               {detailsContent[index].map((detail, detailIndex) => (
