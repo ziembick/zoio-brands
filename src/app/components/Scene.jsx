@@ -15,7 +15,7 @@ export default function Scene() {
         camera={{ position: [0, 0, 5], fov: 60 }}
         dpr={[1, 2]}
         gl={{ alpha: true }}
-        className="w-full h-full"
+        className=""
       >
         <directionalLight intensity={3} position={[0, 3, 2]} />
         <Environment preset="city" />

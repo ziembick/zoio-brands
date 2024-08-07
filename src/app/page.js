@@ -13,7 +13,7 @@ import Paragraph from "./components/paragraph";
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
 import { useScroll } from "framer-motion";
-import { useEffect, useRef, Suspense, lazy, useState } from "react";
+import { useEffect, useRef, lazy, useState, Suspense } from "react";
 import Lenis from "lenis";
 
 const Scene = lazy(() => import("./components/Scene"));
@@ -26,7 +26,7 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [showFallback, setShowFallback] = useState(true);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -37,53 +37,53 @@ export default function Home() {
     }
     requestAnimationFrame(raf);
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1450);
+    const timeout = setTimeout(() => {
+      setShowFallback(false);
+    }, 7000);
 
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      clearTimeout(timeout);
+    };
   }, []);
 
   const paragraph = "PROJETOS EM DESTAQUE";
 
   return (
     <main className="bg-black">
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <Suspense fallback={<div>Loading...</div>}>
-          <Navbar />
-          <Scene />
-          <Sobre />
-          <ZoioVideo />
-          <div className={styles.main} ref={container}>
-            <div
-              className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}
-            >
-              <Paragraph value={paragraph} />
-            </div>
-            {projetos.map((projeto, i) => {
-              const targetScale = 1 - (projetos.length - i) * 0.05;
-              return (
-                <Card
-                  key={i}
-                  {...projeto}
-                  progress={scrollYProgress}
-                  i={i}
-                  range={[i * 0.25, 1]}
-                  targetScale={targetScale}
-                />
-              );
-            })}
+      <Suspense fallback={showFallback ? <Loader /> : null}>
+        <Navbar />
+        <Scene />
+        <Sobre />
+        <ZoioVideo />
+        <div className={styles.main} ref={container}>
+          <div
+            className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}
+          >
+            <Paragraph value={paragraph} />
           </div>
-          <ShowProjects />
-          <Servicos />
-          <Footer />
-        </Suspense>
-      )}
+          {projetos.map((projeto, i) => {
+            const targetScale = 1 - (projetos.length - i) * 0.05;
+            return (
+              <Card
+                key={i}
+                {...projeto}
+                progress={scrollYProgress}
+                i={i}
+                range={[i * 0.25, 1]}
+                targetScale={targetScale}
+              />
+            );
+          })}
+        </div>
+        <ShowProjects />
+        <Servicos />
+        <Footer />
+      </Suspense>
     </main>
   );
 }
+
 
 
 

@@ -9,7 +9,9 @@ import {
 } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { animated, useSpring } from "@react-spring/three";
+import { motion } from 'framer-motion'
 
 export default function Model() {
   const mesh = useRef();
@@ -20,6 +22,12 @@ export default function Model() {
     if (mesh.current) {
       mesh.current.rotation.z += 0.0013;
     }
+  });
+
+  const { scale } = useSpring({
+    from: { scale: 2 },
+    to: { scale: 4 },
+    config: { duration: 1000 },
   });
 
   let materialProps = {};
@@ -50,9 +58,9 @@ export default function Model() {
         TRANSFORME
       </Text>
       
-      <mesh ref={mesh} {...nodes.Curve} position={[0, 0, 0]} color="green">
+      <animated.mesh ref={mesh} {...nodes.Curve} position={[0, 0, 0]} color="green" scale={scale}>
         <MeshTransmissionMaterial {...materialProps} />
-      </mesh>
+      </animated.mesh>
     </group>
   );
 }
