@@ -8,7 +8,7 @@ import styles from "./model.module.css";
 export default function Scene() {
   return (
     <div
-      className={`${styles.principal} w-full h-screen flex items-center justify-center`}
+      className={`${styles.principal} w-full h-screen flex items-center justify-center mb-[-140px]`}
     >
       <Canvas
         style={{ backgroundColor: "black" }}

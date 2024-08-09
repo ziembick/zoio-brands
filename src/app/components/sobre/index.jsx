@@ -77,7 +77,7 @@ export default function Sobre() {
   return (
     <div className="bg-black">
       <div className={`${styles.spacing_small}`}></div>
-      <div ref={triggerRef} className={`${styles.mainContainer} bg-black pt-[-40px]`}>
+      <div ref={triggerRef} className={`${styles.mainContainer} bg-black pt-[-240px]`}>
         <h1 ref={h1Ref} className={`${styles.textos} ${styles.aga1} pb-5`}>
           {`Criando marcas e transformando a sua visão sobre design através de estratégia`
             .split(" ")

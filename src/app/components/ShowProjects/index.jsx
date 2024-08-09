@@ -54,10 +54,10 @@ export default function ShowProjects() {
         <Link href="/galeria">
           <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
             <span className="group-hover:pause animate-loopL">
-              Ver mais projetos&nbsp;
+            &nbsp;Ver mais projetos
             </span>
             <span className="group-hover:pause animate-loopL">
-              Ver mais projetos&nbsp;
+            &nbsp;Ver mais projetos
             </span>
           </div>
         </Link>
