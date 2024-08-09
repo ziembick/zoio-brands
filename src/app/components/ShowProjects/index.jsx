@@ -4,7 +4,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Link from "next/link";
-import styles from './showprojects.module.sass'
+import styles from "./showprojects.module.sass";
 
 gsap.registerPlugin(CustomEase);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
@@ -53,11 +53,11 @@ export default function ShowProjects() {
       >
         <Link href="/galeria">
           <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
-            <span className="group-hover:pause animate-loopL">
-            &nbsp;Ver mais projetos
+            <span className=" group-hover:pause animate-loopL">
+              Ver mais Projetos Ver mais Projetos&nbsp;
             </span>
-            <span className="group-hover:pause animate-loopL">
-            &nbsp;Ver mais projetos
+            <span className=" group-hover:pause animate-loopL">
+              Ver mais Projetos Ver mais Projetos&nbsp;
             </span>
           </div>
         </Link>

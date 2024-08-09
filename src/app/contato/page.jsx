@@ -103,8 +103,8 @@ export default function Contato() {
 
   const webdesign = "Web Development";
   const identidade = "Identidade Visual";
-  const branding = "Branding";
-  const naming = "Naming";
+  const branding = "teste Branding";
+  const naming = "Teste teste Naming";
   const motion = "Motion Design";
   const social = "Social Media";
 

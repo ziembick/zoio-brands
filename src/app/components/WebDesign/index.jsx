@@ -52,8 +52,8 @@ export default function WebDesign({ value }) {
         className="text-white absolute bottom-[-25vw] left-[35%] ml-10 -mr-10 h-8  w-40 overflow-hidden rounded-full border border-white text-xs font-normal uppercase  opacity-0  lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] lg:h-14 lg:w-[16vw] lg:text-xl  lg:leading-10 "
       >
         <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
-          <span className="group-hover:pause animate-loopL">{value}&nbsp;</span>
-          <span className="group-hover:pause animate-loopL">{value}&nbsp;</span>
+          <span className="group-hover:pause animate-loopL">{value}&nbsp;{value}&nbsp;</span>
+          <span className="group-hover:pause animate-loopL">{value}&nbsp;{value}&nbsp;</span>
         </div>
       </div>
     </div>
