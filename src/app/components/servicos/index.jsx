@@ -79,19 +79,19 @@ export default function Servicos() {
 
   const detailsContent = [
     [
-      "Custom Shopify Themes Estratégia",
-      "Headless Shopify Estratégia",
-      "Custom Estratégia",
+      "Estratégia sólida",
+      "Experiências únicas",
+      "Fortalecemos seu posicionamento",
     ],
     [
-      "Custom Shopify Themes Design",
-      "Headless Shopify Design",
-      "Custom Design",
+      "Marcas duradouras",
+      "Elevamos a experiência visual",
+      "Garantimos comunicação eficaz",
     ],
     [
-      "Custom Shopify Themes Development",
-      "Headless Shopify Development",
-      "Custom Development",
+      "Foco em E-Commerce",
+      "Estética e funcionalidade",
+      "Usabilidade e engajamento",
     ],
   ];
 
@@ -123,14 +123,14 @@ export default function Servicos() {
                   ? "Estratégia"
                   : item === 2
                   ? "Design"
-                  : "Development"}
+                  : "Desenvolvimento"}
               </h2>
               <p className={`${styles.text} w-4/5`}>
                 {item === 1
-                  ? "We are a strategy-driven studio. We utilize data, industry experience and instinct to create branded experiences that."
+                  ? "Desenvolvemos estratégias profundas que destacam sua marca e garantem seu sucesso. Nosso foco é criar experiências de marca únicas, relevantes e memoráveis. Entendemos seu negócio para fazer sua marca brilhar no mercado."
                   : item === 2
-                  ? "Design is at the very core of everything we do. We balance form, function and feeling to develop brands in the digital space."
-                  : "We develop websites and apps with user experience, modern technology and business strategy in mind"}
+                  ? "Nosso design não só fala, mas cativa e inspira. Comprometidos com a excelência visual, criamos identidades que representam a essência de sua marca e comunicam poderosamente sua mensagem ao mundo."
+                  : "Desenvolvemos sites e aplicativos funcionais e alinhados com seus objetivos de negócio, melhorando a experiência do usuário e aumentando o engajamento."}
               </p>
             </div>
             <motion.div
