@@ -101,12 +101,12 @@ export default function Contato() {
     );
   };
 
-  const webdesign = "Web Development";
-  const identidade = "Identidade Visual";
-  const branding = "teste Branding";
-  const naming = "Teste teste Naming";
-  const motion = "Motion Design";
-  const social = "Social Media";
+  const webdesign = "Identidade Visual";
+  const identidade = "Web Development";
+  const branding = "Branding Estratégico";
+  const naming = "Motion Design";
+  const motion = "Social Media";
+  const social = "UX/UI Design";
 
   return (
     <>
@@ -150,7 +150,7 @@ export default function Contato() {
 
                 <div className={`${styles.mainDiv}`}>
                   <h2 className="text-black text-3xl font-semibold mb-12">
-                    Brief us on what you need
+                    Nos informe o que você precisa
                   </h2>
                   <div className="flex flex-wrap gap-3 mb-12">
                     <button
@@ -226,7 +226,7 @@ export default function Contato() {
                         handleButtonClick("Strategy");
                       }}
                     >
-                      Strategy
+                      Estratégia
                     </button>
                     <button
                       name="source"
@@ -241,7 +241,7 @@ export default function Contato() {
                         handleButtonClick("Experience Design");
                       }}
                     >
-                      Experience Design
+                      Design Experimental
                     </button>
                     <button
                       name="source"
@@ -256,7 +256,7 @@ export default function Contato() {
                         handleButtonClick("Visual Design");
                       }}
                     >
-                      Visual Design
+                      Design Visual
                     </button>
                     <button
                       name="source"
@@ -271,7 +271,7 @@ export default function Contato() {
                         handleButtonClick("3D Design");
                       }}
                     >
-                      3D Design
+                      Design 3D
                     </button>
                     <button
                       name="source"
@@ -316,7 +316,7 @@ export default function Contato() {
                         handleButtonClick("Illustration");
                       }}
                     >
-                      Illustration
+                      Ilustração
                     </button>
                     <button
                       name="source"
@@ -346,22 +346,22 @@ export default function Contato() {
                         handleButtonClick("Other");
                       }}
                     >
-                      Other
+                      Outros
                     </button>
                   </div>
                   <h1 className="text-black text-3xl font-semibold mb-12">
-                    Introduce yourself
+                    Apresente-se
                   </h1>
                   <div className="flex flex-col lg:flex-row gap-6">
                     <div className="flex-1 space-y-4">
                       <div>
                         <label className="block text-lg font-medium text-black mb-3">
-                          Full name*
+                          Nome Completo*
                         </label>
                         <input
                           type="text"
                           name="name"
-                          placeholder="Your full name"
+                          placeholder="Seu nome completo"
                           className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                       </div>
@@ -372,17 +372,17 @@ export default function Contato() {
                         <input
                           type="email"
                           name="email"
-                          placeholder="Your email address"
+                          placeholder="Seu email"
                           className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                       </div>
                       <div>
                         <label className="block text-lg font-medium text-black mb-3">
-                          Company
+                          Empresa
                         </label>
                         <input
                           type="text"
-                          placeholder="Your company name"
+                          placeholder="Nome da sua empresa"
                           name="company"
                           className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
@@ -394,18 +394,18 @@ export default function Contato() {
                         <input
                           type="text"
                           name="website"
-                          placeholder="Your website"
+                          placeholder="Seu website"
                           className="mt-1 block w-full p-5 border border-gray-300 rounded-lg text-black"
                         />
                         <p className="text-black pt-6 text-base">
-                          All set and filled? Email address looking good?
+                        Tudo pronto e preenchido? O endereço de e-mail parece bom?
                         </p>
                       </div>
                     </div>
                     <div className="flex-1 space-y-4">
                       <div>
                         <label className="block text-lg font-medium text-black mb-3">
-                          Your Enquiry*
+                          Sua Consulta*
                         </label>
                         <textarea
                           name="mensagem"
@@ -418,7 +418,7 @@ export default function Contato() {
                           type="submit"
                           className={`${styles.btn} flex items-center gap-1 px-4 py-2 cursor-pointer text-black font-semibold tracking-widest rounded-md  duration-300 hover:gap-2 hover:translate-x-3`}
                         >
-                          Send
+                          Enviar
                           <svg
                             className="w-5 h-5"
                             stroke="currentColor"
@@ -467,14 +467,18 @@ export default function Contato() {
               </h1>
               <div>
                 <p className="text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Na Zoio, adotamos uma abordagem integrada ao desenvolvimento
+                  de soluções criativas, cobrindo todo o espectro digital e
+                  gráfico. Desde a concepção da marca até a sua implementação em
+                  diversas plataformas, nossa equipe dedica-se a transformar
+                  conceitos em realidades visuais marcantes. Oferecemos desde
+                  desenvolvimento web até estratégias de mídia social, passando
+                  por design de movimento e design UX/UI, combinando estratégia,
+                  design e tecnologia para criar experiências que não apenas
+                  atendem, mas superam as expectativas de nossos clientes. Cada
+                  interação com a marca é projetada para ser única e memorável.
+                  Venha descobrir como podemos elevar sua marca no universo
+                  digital.
                 </p>
               </div>
             </div>
@@ -488,7 +492,7 @@ export default function Contato() {
                     href="mailto:pauloziembick@gmail.com"
                     className={`${styles.email} text-2xl`}
                   >
-                    email@email.com <span className={styles.arrow}>→</span>
+                    zoio@zoiobrands.com <span className={styles.arrow}>→</span>
                   </Link>
                 </EmailHover>
               </div>
@@ -499,7 +503,7 @@ export default function Contato() {
                 <div>
                   <SocialHover>
                     <Link
-                      href="https://instagram.com"
+                      href="https://instagram.com/zoio.brands"
                       target="_blank"
                       className={`${styles.link}`}
                     >
@@ -510,11 +514,20 @@ export default function Contato() {
                   </SocialHover>
                   <SocialHover>
                     <Link
-                      href="https://behance.net"
+                      href="https://behance.net/SilvioLima"
                       target="_blank"
                       className={styles.link}
                     >
                       Behance <span className={styles.arrow}>→</span>
+                    </Link>
+                  </SocialHover>
+                  <SocialHover>
+                    <Link
+                      href="https://www.linkedin.com/company/zoiobrands/"
+                      target="_blank"
+                      className={styles.link}
+                    >
+                      Linkedin <span className={styles.arrow}>→</span>
                     </Link>
                   </SocialHover>
                 </div>
