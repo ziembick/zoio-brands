@@ -6,7 +6,7 @@ export default function EmailHover({ children }) {
     <div
       className={`${styles.primeiro} group relative cursor-pointer overflow-hidden leading-6 text-white`}
     >
-      <h1 className="inline-block p-1 transition duration-500 ease-out group-hover:-translate-y-[120%]">
+      <h1 className="inline-block transition duration-500 ease-out group-hover:-translate-y-[120%]">
         {children}
       </h1>
       <h1

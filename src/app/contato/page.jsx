@@ -518,14 +518,17 @@ export default function Contato() {
                       target="_blank"
                       className={styles.link}
                     >
+                      <p className="pb-3">
                       Behance <span className={styles.arrow}>→</span>
+                      </p>
+                     
                     </Link>
                   </SocialHover>
                   <SocialHover>
                     <Link
                       href="https://www.linkedin.com/company/zoiobrands/"
                       target="_blank"
-                      className={styles.link}
+                      className={`${styles.link}`}
                     >
                       Linkedin <span className={styles.arrow}>→</span>
                     </Link>
