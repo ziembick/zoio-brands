@@ -1,27 +1,50 @@
-import React from 'react'
-import styles from "./content.module.sass"
+import React from "react";
+import styles from "./content.module.sass";
+
+import Link from "next/link";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function Content() {
   return (
-    <div className={`${styles.container} min-h-screen text-white flex justify-between items-center px-10`}>
-      <div className={`${styles.textContainer}text-center`}>
+    <div
+      className={`${styles.container} h-screen text-white flex justify-between items-center px-10`}
+    >
+      <div className={`${styles.textContainer} flex justify-start flex-col `}>
         <h1 className={`${styles.mainText} text-7xl font-bold`}>VEJA,</h1>
         <h1 className={`${styles.mainText} text-7xl font-bold`}>SINTA,</h1>
         <h1 className={`${styles.mainText} text-7xl font-bold`}>TRANSFORME</h1>
       </div>
       <div className={`${styles.secondContainer}`}>
         <p className="text-4xl">zoio@zoiobrands.com.br</p>
-        <div className="flex flex-col items-start mt-10">
-          <a href="https://instagram.com" className="text-2xl mt-2 hover:underline">Instagram</a>
-          <a href="https://behance.net" className="text-2xl mt-2 hover:underline">Behance</a>
-          <a href="https://linkedin.com" className="text-2xl mt-2 hover:underline">LinkedIn</a>
+        <div className="flex flex-col items-start mt-10 ">
+          <Link
+            href="https://instagram.com"
+            className="text-2xl mt-2 hover:underline flex justify-center items-center"
+          >
+            Instagram
+            <MdArrowOutward size={20} className="text-white ml-2"/>
+          </Link>
+          <Link
+            href="https://behance.net"
+            className="text-2xl mt-2 hover:underline flex justify-center items-center"
+          >
+            Behance
+            <MdArrowOutward size={20} className="text-white ml-2"/>
+          </Link>
+          <Link
+            href="https://linkedin.com"
+            className="text-2xl mt-2 hover:underline flex justify-center items-center"
+          >
+            LinkedIn
+            <MdArrowOutward size={20} className="text-white ml-2"/>
+          </Link>
         </div>
-      <footer className="pt-10">
-        <p>Zoio Brands - Estúdio © 2024</p>
-      </footer>
+        <div className="pt-10">
+          <p className="text-right">Zoio Brands - Estúdio © 2024</p>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 // const Section1 = () => {
