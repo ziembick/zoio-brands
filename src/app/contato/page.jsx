@@ -129,18 +129,19 @@ export default function Contato() {
           </svg>
         </div>
         <div className="flex py-10 px-10 justify-between items-start max-lg:flex-col">
-          <div className="">
+          <div className="w-1/2">
             {/* alterado aqui */}
-            <h2 className={`${styles.containerTitle} pb-7 text-5xl`}>
+            <h2 className={`${styles.containerTitle} pb-7 xl:text-5xl lg:text-4xl md:text-3xl`}>
               Pré Briefing
             </h2>
+            {/* DIVISÃO UM */}
             <div
-              className={`${styles.contatoForm} bg-white flex items-center justify-center p-4 rounded-lg shadow-lg`}
+              className={`${styles.contatoForm} bg-white flex items-center justify-center p-4 rounded-lg shadow-lg `}
             >
               <form
                 ref={form}
                 onSubmit={sendEmail}
-                className={`${styles.mainForm} bg-white flex items-center justify-center p-4 max-w-4xl w-full `}
+                className={`${styles.mainForm} bg-white flex items-center justify-center max-w-4xl w-full `}
               >
                 <input
                   type="hidden"
@@ -352,7 +353,7 @@ export default function Contato() {
                   <h1 className="text-black text-3xl font-semibold mb-12">
                     Apresente-se
                   </h1>
-                  <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="flex flex-col xl:flex-row gap-6">
                     <div className="flex-1 space-y-4">
                       <div>
                         <label className="block text-lg font-medium text-black mb-3">
@@ -441,9 +442,10 @@ export default function Contato() {
               </form>
             </div>
           </div>
-          <div className="flex-1 flex flex-col justify-center pl-10">
+          {/* DIVISÃO DOIS */}
+          <div className="flex-1 flex flex-col justify-center pl-10 w-1/2">
             <div className={`${styles.segundaSessao} pb-16`}>
-              <h1 className={`${styles.segundaSessaoTitle} pb-16 text-5xl`}>
+              <h1 className={`${styles.segundaSessaoTitle} pb-16 xl:text-5xl lg:text-4xl md:text-3xl`}>
                 Como podemos te ajudar
               </h1>
               <div className="flex justify-between flex-col items-center space-y-6">
