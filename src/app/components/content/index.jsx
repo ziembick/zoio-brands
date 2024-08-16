@@ -7,45 +7,54 @@ import { MdArrowOutward } from "react-icons/md";
 export default function Content() {
   return (
     <div
-      className={`${styles.container} h-screen text-white flex justify-between items-center px-10`}
+      className={`h-screen text-white flex justify-between items-center px-10 relative`}
     >
-      <div className={`${styles.textContainer} flex justify-start flex-col `}>
-        <h1 className={`${styles.mainText} text-7xl font-bold`}>VEJA,</h1>
-        <h1 className={`${styles.mainText} text-7xl font-bold`}>SINTA,</h1>
-        <h1 className={`${styles.mainText} text-7xl font-bold`}>TRANSFORME</h1>
-      </div>
-      <div className={`${styles.secondContainer}`}>
-        <p className="text-4xl">zoio@zoiobrands.com.br</p>
-        <div className="flex flex-col items-start mt-10 ">
-          <Link
-            href="https://instagram.com"
-            className="text-2xl mt-2 hover:underline flex justify-center items-center"
-          >
-            Instagram
-            <MdArrowOutward size={20} className="text-white ml-2"/>
-          </Link>
-          <Link
-            href="https://behance.net"
-            className="text-2xl mt-2 hover:underline flex justify-center items-center"
-          >
-            Behance
-            <MdArrowOutward size={20} className="text-white ml-2"/>
-          </Link>
-          <Link
-            href="https://linkedin.com"
-            className="text-2xl mt-2 hover:underline flex justify-center items-center"
-          >
-            LinkedIn
-            <MdArrowOutward size={20} className="text-white ml-2"/>
-          </Link>
+      {/* Conteúdo principal */}
+      <div className={`relative z-10 w-full flex justify-between items-center px-10`}>
+        <div className={`${styles.textContainer} flex justify-start flex-col`}>
+          <h1 className={`${styles.mainText} text-7xl font-bold`}>VEJA,</h1>
+          <h1 className={`${styles.mainText} text-7xl font-bold`}>SINTA,</h1>
+          <h1 className={`${styles.mainText} text-7xl font-bold`}>TRANSFORME</h1>
         </div>
-        <div className="pt-10">
-          <p className="text-right">Zoio Brands - Estúdio © 2024</p>
+        <div className={`${styles.secondContainer}`}>
+          <p className="text-4xl">zoio@zoiobrands.com.br</p>
+          <div className="flex flex-col items-start mt-10">
+            <Link
+              href="https://instagram.com"
+              className="text-2xl mt-2 hover:underline flex justify-center items-center"
+            >
+              Instagram
+              <MdArrowOutward size={20} className="text-white ml-2" />
+            </Link>
+            <Link
+              href="https://behance.net"
+              className="text-2xl mt-2 hover:underline flex justify-center items-center"
+            >
+              Behance
+              <MdArrowOutward size={20} className="text-white ml-2" />
+            </Link>
+            <Link
+              href="https://linkedin.com"
+              className="text-2xl mt-2 hover:underline flex justify-center items-center"
+            >
+              LinkedIn
+              <MdArrowOutward size={20} className="text-white ml-2" />
+            </Link>
+          </div>
+          <div className="pt-10">
+            <p className="text-right">Zoio Brands - Estúdio © 2024</p>
+          </div>
         </div>
       </div>
+
+      {/* Contêiner da Imagem de Fundo com h-1/2 */}
+      <div
+        className={`${styles.container} absolute bottom-0 left-0 w-full h-1/2`}
+      ></div>
     </div>
   );
 }
+
 
 // const Section1 = () => {
 //     return (
