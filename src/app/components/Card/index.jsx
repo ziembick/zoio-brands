@@ -29,7 +29,7 @@ export default function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className={styles.cardContainer}>
+    <div ref={container} className={`${styles.cardContainer}`}>
       <Link href={href}>
         <motion.div
           className={styles.card}

@@ -56,7 +56,7 @@ export default function Home() {
         <Scene />
         <Sobre />
         <ZoioVideo />
-        <div className={styles.main} ref={container}>
+        <div className={`${styles.main} mt-[100vh] lg:mt-[100vh] lg:mb-[150vh] mb-[100vh]`} ref={container}>
           <div
             className={`${styles.destaque} text-white flex justify-center items-center text-5xl`}
           >
