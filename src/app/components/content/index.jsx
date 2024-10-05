@@ -7,7 +7,7 @@ import { MdArrowOutward } from "react-icons/md";
 export default function Content() {
   return (
     <div
-      className={`h-screen text-white flex justify-between items-center px-10 relative`}
+      className={`h-full text-white flex justify-between items-center px-10 relative`}
     >
       {/* Conteúdo principal */}
       <div className={`relative z-10 w-full flex justify-between items-center px-10`}>
