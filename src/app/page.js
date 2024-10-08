@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Navbar from "./components/navbar";
 import Sobre from "./components/sobre";
 import Footer from "./components/footer";
@@ -9,6 +8,7 @@ import ZoioVideo from "./components/zoio";
 import Cursor from "./components/cursor";
 import Servicos from "./components/servicos";
 import ShowProjects from "./components/ShowProjects";
+import MobileRender from "./components/MobileRender"; 
 import Paragraph from "./components/paragraph";
 import styles from "./page.module.sass";
 import { projetos } from "../app/data";
@@ -25,6 +25,20 @@ export default function Home() {
     target: container,
     offset: ["start start", "end end"],
   });
+
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1200)
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   const [showFallback, setShowFallback] = useState(true);
 
@@ -48,6 +62,14 @@ export default function Home() {
   }, []);
 
   const paragraph = "PROJETOS EM DESTAQUE";
+
+  if (isMobile) {
+    return (
+      <main className="bg-black">
+        <MobileRender />  
+      </main>
+    )
+  }
 
   return (
     <main className="bg-black">
